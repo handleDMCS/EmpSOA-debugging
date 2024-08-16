@@ -720,8 +720,6 @@ def gen_embeddings(vocab):
                 if sp[0] in vocab.word2index:
                     pre_trained += 1
                     embeddings[vocab.word2index[sp[0]]] = [float(x) for x in sp[1:]]
-            else:
-                print(sp[0])
         print(
             "Pre-trained: %d (%.2f%%)"
             % (pre_trained, pre_trained * 100.0 / vocab.n_words)
