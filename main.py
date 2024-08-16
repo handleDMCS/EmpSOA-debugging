@@ -39,7 +39,7 @@ def train(model, train_set, dev_set):
         patient = 0
         weights_best = deepcopy(model.state_dict())
         data_iter = make_infinite(train_set)
-        for n_iter in tqdm(range(500000)):
+        for n_iter in tqdm(range(1000000)):
             loss, ppl, bce, acc, _, _ = model.train_one_batch(
                 next(data_iter), n_iter
             )
